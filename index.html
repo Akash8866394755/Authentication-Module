@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./style/index.css" />
+    <script src="./js/jquery.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/ajax_signup_check_user.js"></script>
+    <script src="./js/signup.js"></script>
+    <script src="./js/activation.js"></script>
+    <script src="./js/ajax_login_check_user.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/login_activation_code.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="register-box">
+            <div id="title">
+                <h2>Register Now</h2>
+            </div>
+            <div id="content">
+                <div id="image-content">
+                    <img src="images/signup-image.png" alt="" />
+                </div>
+            <div id="signup-card">
+                <form name="register">
+                    <div id="input-field">
+                        <label for="">Fullname</label>
+                        <input type="text" id="signup-fullname" required="required">
+                    </div>
+    
+                    <div id="input-field">
+                        <label for="">Email</label>
+                        <div id="signup-email-c">
+                            <input type="email" id="signup-email" required="required">
+                            <i class="" id="signup-email-icon"></i>
+                        </div>
+                        <p id="signup-email-message">user already exist.</p>
+                    </div>
+    
+                    <div id="input-field">
+                        <label for="">Password</label>
+                        <input type="text" id="signup-password" required="required">
+                    </div>
+                    <div>
+                        <p id="signup-error">Something went wrong. Try again later!</p>
+                    </div>
+                    <button type="submit" id="signup-btn" disabled="disabled" style="cursor: not-allowed;">Register Now</button>
+                    <div id="opt">
+                        <p>Already have an account?</p>
+                        <button id="opt-login" type="button">Login</button>
+                    </div>
+                </form>
+            </div>
+            <div id="signup-activation-box">
+                <label for="">Please check your email to get activation code.</label>
+                <input type="text" id="signup-active-input" required>
+                <button id="signup-active-btn" type="button" style="margin: 16px 0; cursor: pointer;">Active Now</button>
+                <p id="activation-error">Incorrect activation code !</p>
+            </div>
+            </div>
+        </div>
+
+    <!-- Login now -->
+        <div id="login-box" style="display: none;">
+            <div id="title">
+                <h2>Login Now</h2>
+            </div>
+            <div id="content">
+                <div id="image-content">
+                    <img src="images/login-image.png" alt="" />
+                </div>
+            <div id="login-card">
+                <form name="login">
+                    
+                    <div id="input-field">
+                        <label for="">Email</label>
+                        <div id="login-email-c">
+                            <input type="email" id="login-email" required="required">
+                            <i class="" id="login-email-icon"></i>
+                        </div>
+                        <p id="login-email-message">user not found.</p>
+                    </div>
+
+                    <div id="input-field">
+                        <label for="">Password</label>
+                        <input type="text" id="login-password" required="required">
+                        <p id="login-password-message" style="padding: 10px 20px; background: #F8D7DA; color: #000; margin: 12px 0; width:fit-content; border-radius: 3px; box-shadow: 0 0 10px 0 #ddd; counter-reset: #000;">Password is invalid!</p>
+                        <p id="internet-error" style="display:none; padding:10px 20px; background: #F8D7DA; color: #000; margin: 12px 0; width:fit-content; border-radius: 3px; box-shadow: 0 0 10px 0 #ddd; counter-reset: #000;">Something went wrong. Try again later</p>
+                    </div>
+                    <button type="submit" id="login-btn" disabled="disabled" style="cursor: not-allowed;">Login</button>
+                    <div id="opt">
+                        <p>Did not have an account?</p>
+                        <button id="opt-register" type="button">Register</button>
+                    </div>
+                </form>
+            </div>
+            <div id="login-activation-box">
+                <label for="">Please check your email to get activation code.</label>
+                <input type="text" id="login-active-input">
+                <button id="login-active-btn" type="button" style="margin: 16px 0; cursor: pointer;">Active Now</button>
+                <p id="login-activation-error" style="display:none; padding: 10px 20px; background: #F8D7DA; color: white; margin: 12px 0; width:fit-content; border-radius: 3px; box-shadow: 0 0 10px 0 #ddd; counter-reset: #000;">Incorrect activation code !</p>
+
+            </div>
+            </div>
+        </div>
+</div>
+</body>
+</html>
